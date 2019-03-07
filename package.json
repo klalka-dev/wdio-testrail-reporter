@@ -1,6 +1,6 @@
 {
   "name": "wdio-v5-testrail-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TestRail reporter for WebdriverIO v5",
   "homepage": "https://github.com/klalka-dev/wdio-testrail-reporter.git",
   "main": "build/reporter.js",
