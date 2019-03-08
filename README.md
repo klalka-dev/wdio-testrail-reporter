@@ -4,7 +4,7 @@
 
 **NOTE:** This reporter uses TestRail v2 API endpoints which require TestRail 3.1 or later.
 
-`npm i wdio-testrail-reporter`
+`npm i wdio-v5-testrail-reporter`
 
 Add the required options to your WDIO config file
 
