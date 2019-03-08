@@ -151,9 +151,11 @@ export default class TestRailReporter extends WDIOReporter {
 
   private pushToResponse(iterateObj): void {
     iterateObj.tests.forEach((test) => {
-      if (test.title.match(this.regex)) {
+      const matches = test.title.match(this.regex);
+      if (matches.length >= 1) {
+        matches.forEach(caseId => {
         const result = {
-          case_id: test.title.match(this.regex)[0],
+          case_id: caseId,
           elapsed: test.duration,
           status_id: this.getTestState(test.state),
         };
@@ -164,6 +166,7 @@ export default class TestRailReporter extends WDIOReporter {
         }
 
         this.body.results.push(result);
+       });
       } else {
         this.log.error("Unable to match case_id pattern in test title: ", test.title);
       }
