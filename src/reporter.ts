@@ -188,7 +188,7 @@ export default class TestRailReporter extends WDIOReporter {
 
                     const result = {
                         case_id: caseId,
-                        elapsed: ((test._duration % 60000) / 1000).toFixed(0) + 's', // round to seconds
+                        elapsed:  (test._duration / 1000).toFixed(0) + 's', // round to seconds
                         status_id: this.getTestState(test.state),
                     };
 
