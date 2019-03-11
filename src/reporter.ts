@@ -152,7 +152,7 @@ export default class TestRailReporter extends WDIOReporter {
   private pushToResponse(iterateObj): void {
     iterateObj.tests.forEach((test) => {
       const matches = test.title.match(this.regex);
-      if (matches.length >= 1) {
+      if (matches !== null) {
         matches.forEach(caseId => {
         const result = {
           case_id: caseId,
